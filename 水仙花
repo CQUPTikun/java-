@@ -1,0 +1,17 @@
+public class ShuiXianHua {
+    public static void main(String[] args) {
+        ShuiXianHua();
+    }
+
+    public static void ShuiXianHua() {
+        for(int i=100; i<1000; i++) {
+            int digit1 = i / 100;
+            int digit2 = (i % 100) / 10;
+            int digit3 = i % 10;
+
+            if(i == digit1*digit1*digit1 + digit2*digit2*digit2 + digit3*digit3*digit3) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
