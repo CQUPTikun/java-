@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("请输入一个整数：");
+        int num= input.nextInt();
+        isPalindrome(num);
+    }
+
+    public static void isPalindrome(int num) {
+        int reversedNum = 0; 
+        int originalNum = num; 
+        while (num != 0) {
+            int remainder = num % 10;
+            reversedNum = reversedNum * 10 + remainder;
+            num /= 10;
+        }
+        boolean flag = reversedNum == originalNum;
+
+        if (flag) {
+            System.out.println("是的") ;
+        } else {
+            System.out.println("不是") ;
+        }
+    }
+}
