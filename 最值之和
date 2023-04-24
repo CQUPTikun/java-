@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        arraysDemo();
+    }
+
+    public static void arraysDemo() {
+        Scanner input = new Scanner(System.in);
+        int n=10;
+        int[] nums = new int[n];
+        for(int i=0; i<n; i++) {
+            System.out.print("请输入第" + (i+1) + "个元素：");
+            nums[i] = input.nextInt();
+        }
+        int min = nums[0];
+        int max = nums[0];
+        for(int num : nums) {
+            if(num < min) {
+                min = num;
+            }
+            if(num > max) {
+                max = num;
+            }
+        }
+        System.out.println(min+max);
+    }
+}
